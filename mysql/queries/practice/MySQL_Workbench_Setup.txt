@@ -1,0 +1,8 @@
+USE twitter;
+INSERT INTO users(first_name, last_name, handle, birthday, createfavesuser_idd_at, updated_at)
+VALUES ('John', 'Smith', 'John-Smith', '1994-10-17', NOW() , NOW() ) ;
+SELECT * FROM users;
+UPDATE users SET
+handle = 'Jhonny' , updated_at = NOW()
+WHERE id = 7;
+DELETE FROM users WHERE id = 7;

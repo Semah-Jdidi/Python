@@ -1,0 +1,39 @@
+USE dojos_and_ninjas;
+
+INSERT INTO dojos(name, created_at, updated_at)
+VALUES('Web Fundamentals', NOW() , NOW());
+VALUES('Python', NOW() , NOW());
+VALUES('MERN', NOW() , NOW());
+
+DELETE FROM dojos
+WHERE id BETWEEN 0 AND 3;
+
+INSERT INTO dojos(name, created_at, updated_at)
+VALUES('Java', NOW() , NOW());
+VALUES('MySQL', NOW() , NOW());
+VALUES('FLASK', NOW() , NOW());
+
+INSERT INTO ninjas(first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES('Andres', 'Hooper', 20, NOW() , NOW() , 4);
+VALUES('Darnell', 'Burnett', 34, NOW() , NOW() , 4);
+VALUES('Emma', 'Mathews', 28, NOW() , NOW() , 4);
+
+VALUES('Isabell', 'Frazier', 24, NOW() , NOW() , 5);
+VALUES('Dean', 'Lee', 31, NOW() , NOW() , 5);
+VALUES('Max', 'Hill', 26, NOW() , NOW() , 5);
+
+VALUES('Liam', 'Craig', 29, NOW() , NOW() , 6);
+VALUES('Damien', 'Daniel', 22, NOW() , NOW() , 6);
+VALUES('Felipe', 'Lamb', 24, NOW() , NOW() , 6);
+
+SELECT * FROM ninjas
+JOIN dojos ON dojos.id = ninjas.dojo_id
+WHERE dojos.id = 4;
+
+SELECT * FROM ninjas
+JOIN dojos ON dojos.id = ninjas.dojo_id
+WHERE dojos.id = 6;
+
+SELECT * FROM dojos
+JOIN ninjas ON dojos.id = ninjas.dojo_id
+WHERE ninjas.id = 9;
