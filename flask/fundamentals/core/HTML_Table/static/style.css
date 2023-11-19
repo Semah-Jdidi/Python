@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+table{
+    border-collapse: collapse;
+}
+.header{
+    background-color: #222831;
+}
+
+.header th{
+    width: 200px;
+    padding: 20px;
+    color: #fdb44b;
+}
+
+.table_row{
+    width: 200px;
+    background-color: #ffffff;
+}
+
+.table_row td{
+    padding: 20px;
+    text-align: center;
+}
+
+.table_row:hover{
+    background-color: #d9dad7;
+}

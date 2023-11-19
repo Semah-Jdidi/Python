@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+    <table>
+        <tr class="header">
+            {%for head in heading:%}
+                <th class="table_head">
+                    <h2>{{head}}</h2>
+                </th>
+            {%endfor%}
+        </tr>
+        {%for column in users:%}
+            <tr class="table_row">
+                <td>{{column['first_name']}}</td>
+                <td>{{column['last_name']}}</td>
+                <td>{{column['full_name']}}</td>
+            </tr>
+        {%endfor%}
+    </table>
+    </div>
+</body>
+</html>
