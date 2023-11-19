@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title{
+    color: red;
+    background-color: bisque;
+    margin-top: 40px;
+    padding: 20px 60px;
+}
+
+.wrapper{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.column1{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+.column2{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; justify-content:center;"><h1 class="title">***Checkerboard***</h1></div>
+    <div class="wrapper">
+        <table>
+            {%for i in range(0,row):%}
+            <tr>
+                {%for x in range(column):%}
+                    {% if (x+i) % 2 == 0 %}
+                        <td class="column1"></td>
+                    {% else %}
+                        <td class="column2"></td>
+                    {%endif%}
+                {%endfor%}
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+</body>
+</html>
