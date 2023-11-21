@@ -1,0 +1,42 @@
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 200px;
+}
+
+
+.btn1{
+    padding: 20px 40px;
+    background-color: lightskyblue;
+    color: white;
+    text-decoration: none;
+}
+
+.btn2{
+    padding: 20px 40px;
+    background-color: lightcoral;
+    color: white;
+    text-decoration: none;
+}
+
+.btn1:hover{
+    cursor: pointer;
+    background-color: lightcoral;
+}
+
+.btn2:hover{
+    cursor: pointer;
+    background-color: lightskyblue;
+}
