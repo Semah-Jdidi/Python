@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Form Styling */
+
+.title{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper form{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.input-field{
+    width: 600px;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid lightskyblue;
+}
+
+.form-btn{
+    width: 150px;
+    height: 40px;
+    background-color: lightseagreen;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.form-btn:hover{
+    cursor: pointer;
+}
+
+.btn-wrap{
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+}
+.show-users{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: lightseagreen;
+    font-size: 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    color:black;
+    border: 2px solid black;
+}
+
+
+
+/* Table Styling */
+.title2{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+table thead{
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+}
+
+table tr td{
+    padding: 20px;
+    font-size: 20px;
+}
+
+table tbody tr{
+    border-bottom: 1px solid black;
+}
+
+table tbody tr:hover{
+    background-color:azure;
+}
+
+.add-user{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: lightseagreen;
+    font-size: 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    color:azure;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">Add User</h1>
+    <div class="btn-wrap">
+    <a class="show-users" href="/display">Show Users</a>
+    </div>
+    <div class="wrapper">
+        <form action="/process" method="POST">
+            <label for="first_name">First Name :</label>
+            <input class="input-field" type="text" name="first_name">
+
+            <label for="last_name">Last Name :</label>
+            <input class="input-field" type="text" name="last_name">
+
+            <label for="email">Email :</label>
+            <input class="input-field" type="text" name="email">
+
+            <input class="form-btn" type="submit" value="Add User">
+        </form>
+    </div>
+</body>
+</html>
