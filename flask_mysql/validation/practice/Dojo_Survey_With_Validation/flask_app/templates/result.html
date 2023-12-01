@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            {%for dojo in dojos:%}
+                <h2>{{dojo.name}}</h2>
+                <ul class="user_info">
+                    <li>
+                        Location : {{dojo.location}}
+                    </li>
+                    <li>
+                        Favourite Language : {{dojo.language}}
+                    </li>
+                    <li>
+                        Comments : {{dojo.comment}}
+                    </li>
+                </ul>
+            {%endfor%}
+            <a class="home" href="/">Home</a>
+        </div>
+    </div>
+</body>
+</html>

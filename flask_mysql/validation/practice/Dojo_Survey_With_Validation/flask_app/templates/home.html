@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h2>Dojo Survey</h2>
+            {%with messages = get_flashed_messages()%}
+                {%if messages%}
+                    {%for message in messages%}
+                        <p class="flashed_messages">{{message}}</p>
+                    {%endfor%}
+                {%endif%}
+            {%endwith%}
+            <form class="form" action="/process" method="POST">
+                <label for="name">Name:</label>
+                <input class="field1" type="text" name="name">
+                <label for="location">Dojo Location:</label>
+                <select  class="field2" name="location">
+                    <option value="">-- Select A Location --</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="atlanta">Atlanta</option>
+                    <option value="new york">New York</option>
+                    <option value="san jose">San Jose</option>
+                </select>
+                <label for="language">Favourite Language:</label>
+                <select class="field2" name="language">
+                    <option value="">-- Select A Location --</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">Javascript</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="c#">C#</option>
+                </select>
+                <label for="comment">Comments:</label>
+                <textarea class="field3" name="comment" cols="30" rows="14"></textarea>
+                <input class="btn" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
