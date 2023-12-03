@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h2 class="title">Email Adresses Entered:</h2>
+            <table class="email-table">
+                <thead>
+                    <tr>
+                        <td>Email</td>
+                        <td>Created At</td>
+                        <td>Updated At</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for email in emails:%}
+                        <tr>
+                            <td>{{email.email}}</td>
+                            <td>{{email.created_at}}</td>
+                            <td>{{email.updated_at}}</td>
+                        </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+            <a class="home-btn" href="/">Home</a>
+        </div>
+    </div>
+</body>
+</html>

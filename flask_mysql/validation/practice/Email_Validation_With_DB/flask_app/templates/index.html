@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="process" method="POST">
+            {%with messages = get_flashed_messages()%}
+                {%if messages:%}
+                    {%for message in messages:%}
+                        <p class="flashed_msg">{{message}}</p>
+                    {%endfor%}
+                {%endif%}
+            {%endwith%}
+            <label for="email">Email: </label>
+            <input class="txt-field" type="text" name="email">
+            <input class="submit-btn" type="submit" value="Add Email">
+        </form>
+    </div>
+</body>
+</html>
