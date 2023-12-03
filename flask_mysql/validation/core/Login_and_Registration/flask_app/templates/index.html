@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h2>Register</h2>
+            {%with messages = get_flashed_messages(category_filter=['register'])%}
+                {%if messages:%}
+                    {%for message in messages:%}
+                        <p class="flashed_messages">{{message}}</p>
+                    {%endfor%}
+                {%endif%}
+            {%endwith%}
+            <form class="form" action="/register" method="POST">
+                <label for="first name">First Name:</label>
+                <input type="text" name="first_name">
+                <label for="last name">Last Name:</label>
+                <input type="text" name="last_name">
+                <label for="email">Email:</label>
+                <input type="text" name="email">
+                <label for="password">Password:</label>
+                <input type="password" name="password">
+                <label for="password confirmation">Confirm Password:</label>
+                <input type="password" name="confirm_password">
+                <input class="btn" type="submit" value="Register">
+            </form>
+        </div>
+        <div>
+            <div class="container">
+                <h2>Login</h2>
+                {%with messages = get_flashed_messages(category_filter=['login'])%}
+                    {%if messages:%}
+                        {%for message in messages:%}
+                            <p class="flashed_messages">{{message}}</p>
+                        {%endfor%}
+                    {%endif%}
+                {%endwith%}
+                <form class="form" action="/login" method="POST">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password">
+                    <input class="btn" type="submit" value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
