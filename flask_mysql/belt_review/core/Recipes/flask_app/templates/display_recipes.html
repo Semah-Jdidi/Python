@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1 class="dashboard-title">Welcome {{user.first_name}}</h1>
+        <div>
+            <a class="href-btn" href="/dashboard">Dashboard</a>
+            <a class="href-btn" href="/logout">Logout</a>
+        </div>
+    </header>
+    <main>
+        <div class="display-recipes">
+            <h2>{{recipe.name}}</h2>
+            <ul>
+                <li>Description:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{recipe.description}}</li>
+                <li>Instruction:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{recipe.instructions}}</li>
+                <li>Date Made On:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{recipe.date_made_on}}</li>
+            </ul>
+        </div>
+    </main>
+    
+</body>
+</html>
